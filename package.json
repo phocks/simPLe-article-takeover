@@ -30,7 +30,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@abcnews/simple-article-takeover",
+  "name": "simple-article-takeover",
   "author": "Joshua Byrd",
   "module": "dist/simple-article-takeover.esm.js",
   "size-limit": [
