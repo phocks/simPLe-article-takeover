@@ -16,10 +16,6 @@ class App {
   }
 }
 
-// interface takeover {
-//   addClass?: string;
-// }
-
 export const takeover = async (config) => {
   await requestDOMPermit(DECOY_KEYS.ARTICLE);
 
