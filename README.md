@@ -17,5 +17,6 @@ import takeover from "@abcnews/simple-article-takeover"
 
 await takeover()
 
+or await takeover({ addClass: "article-container" })
 ```
 
