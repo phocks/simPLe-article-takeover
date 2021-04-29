@@ -1,7 +1,7 @@
 import { DECOY_KEYS, requestDOMPermit } from '@abcnews/env-utils';
 import styles from './styles.scss';
 
-const FALLBACK_CLASS_NAME = 'article-takeover-container'
+const FALLBACK_CLASS_NAME = 'article-takeover-container';
 
 interface App {
   el: HTMLElement;
@@ -16,7 +16,11 @@ class App {
   }
 }
 
-export const takeover = async (config) => {
+interface ConfigOptions {
+  addClass?: string;
+}
+
+export const takeover = async (config?: ConfigOptions) => {
   await requestDOMPermit(DECOY_KEYS.ARTICLE);
 
   // Remove sidebar
@@ -26,6 +30,7 @@ export const takeover = async (config) => {
   sidebarEl.classList.add('nodisplay');
 
   // Create the root container
+  // (Assumes first .Sidebar is main content)
   const root = document.querySelector('[data-component="Sidebar"]');
   render(new App({ addClass: config?.addClass }).el, root);
 
