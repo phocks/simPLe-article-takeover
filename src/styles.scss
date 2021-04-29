@@ -27,8 +27,8 @@ $max-width: 700px;
   // padding-right: 1rem;
   // }
 
-  [data-component='NewsTicker'],
-  [data-component='SiteNavWithMore'] {
+  // [data-component='SiteNavWithMore']
+  [data-component='NewsTicker'] {
     display: none;
   }
 
