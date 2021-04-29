@@ -21,6 +21,7 @@ interface ConfigOptions {
 }
 
 export const takeover = async (config?: ConfigOptions) => {
+  // Request DOM permit from PL
   await requestDOMPermit(DECOY_KEYS.ARTICLE);
 
   // Remove sidebar
@@ -33,6 +34,9 @@ export const takeover = async (config?: ConfigOptions) => {
   // (Assumes first .Sidebar is main content)
   const root = document.querySelector('[data-component="Sidebar"]');
   render(new App({ addClass: config?.addClass }).el, root);
+
+  // Fade in content
+  root?.classList.add('unveiled');
 
   return config?.addClass || FALLBACK_CLASS_NAME;
 };

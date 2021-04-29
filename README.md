@@ -7,16 +7,19 @@ Take over PL (Presentation Later) articles with a single `div`.
 In console:
 
 ```bash
-$ npm install @abcnews/simple-article-takeover
+$ npm install simple-article-takeover
 ```
 
 In JS:
 
 ```javascript
-import takeover from "@abcnews/simple-article-takeover"
+import takeover from "simple-article-takeover"
 
+// In an async function
 await takeover()
+// ... other stuff happens
 
+// Can set a custom class on the div
 or await takeover({ addClass: "article-container" })
 ```
 
