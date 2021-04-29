@@ -1,6 +1,10 @@
 # simPLe-article-takeover
 
-Take over PL (Presentation Later) articles with a single `div`.
+Take over PL (Presentation Later) articles full-width with a single `div`.
+
+eg.
+
+<img src="https://user-images.githubusercontent.com/437566/116630079-f1fc5800-a995-11eb-8019-49c4acf39a9c.png" width=360 />
 
 ## Usage
 
