@@ -27,3 +27,4 @@ await takeover()
 or await takeover({ addClass: "article-container" })
 ```
 
+NOTE: Doesn't seem to work anymore on Presentation Layer running Next.js
